@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RJ Rockers Brewing Co. | Spartanburg Craft Beer & Taproom</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rockerAmber: '#d97706',
+            rockerGold: '#f59e0b',
+            rockerDark: '#121214',
+            rockerCard: '#1a1a1e',
+            rockerBorder: '#27272a'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: grid; }
+  </style>
+</head>
+<body class="bg-rockerDark text-stone-100 font-sans antialiased selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- Hoppy Hour Cross-Promo Announcement -->
+  <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-stone-950 text-xs py-2 px-4 text-center font-black tracking-wide">
+    🍺 HOPPY HOUR: MON–THURS 4–6 PM • DRINK SPECIALS • 50% OFF STREAKING BIRDIES SIMULATOR BOOKINGS
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 bg-[#121214]/95 backdrop-blur border-b border-rockerBorder">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Logo Stamp -->
+        <div class="w-10 h-10 rounded-full border-2 border-amber-500 flex items-center justify-center font-black text-amber-500 text-sm bg-stone-900 shadow">
+          RJ
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-wider text-amber-500 font-serif">RJ ROCKERS</span>
+          <span class="block text-[10px] tracking-widest text-stone-400 uppercase font-semibold">Brewing Co. • Est. 1997</span>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-stone-300">
+        <a href="#taps" class="hover:text-amber-400 transition">Draft List</a>
+        <a href="#food" class="hover:text-amber-400 transition">Taproom Menu</a>
+        <a href="#specials" class="hover:text-amber-400 transition">Chef Specials</a>
+        <a href="#events" class="hover:text-amber-400 transition">Events & Music</a>
+        <a href="#retail" class="hover:text-amber-400 transition">Kegs To-Go</a>
+      </nav>
+      <a href="#taps" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-4 py-2 rounded-lg text-sm transition shadow-lg shadow-amber-500/20">
+        What's On Tap
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 px-4 text-center border-b border-rockerBorder bg-gradient-to-b from-[#1c1917] via-rockerDark to-rockerDark">
+    <div class="max-w-3xl mx-auto space-y-5">
+      <span class="inline-block bg-amber-500/10 text-amber-400 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-widest border border-amber-500/20">
+        Downtown Spartanburg's Original Craft Brewery
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+        Craft Beer. Great Times. <br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-300">
+          Eat Good. Play Good.
+        </span>
+      </h1>
+      <p class="text-stone-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+        Pours from our working brewhouse, scratch-made pub favorites from our kitchen, and live music on the stage. Bring your crew and your pup to 226 W Main.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-3">
+        <a href="#taps" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-6 py-3 rounded-lg shadow-lg shadow-amber-500/20 transition">
+          View Draft Board
+        </a>
+        <a href="#food" class="bg-stone-800 hover:bg-stone-700 text-white font-bold px-6 py-3 rounded-lg border border-stone-700 transition">
+          Taproom Food Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF SPECIALS SPOTLIGHT (Direct from Fresh Insert) -->
+  <section id="specials" class="py-14 px-4 max-w-6xl mx-auto border-b border-rockerBorder">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-xs uppercase tracking-widest text-amber-500 font-extrabold">Scratch-Made Kitchen</span>
+      <h2 class="text-3xl font-black text-white mt-1">Current Chef Specials</h2>
+      <p class="text-stone-400 text-sm mt-1">Rotating kitchen creations crafted to pair perfectly with our craft pours.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Special 1 -->
+      <div class="bg-rockerCard border border-rockerBorder rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition">
+        <div>
+          <span class="text-[10px] bg-amber-500/20 text-amber-300 font-black px-2 py-0.5 rounded uppercase tracking-wider">Flatbread Special</span>
+          <h3 class="text-lg font-black text-white mt-2 mb-1">Honey Do-List Flatbread</h3>
+          <p class="text-xs text-stone-300">Diced ham, crispy bacon pieces, onions, feta, and mozzarella cheese on a garlic oil flatbread, finished with a hot honey glaze.</p>
+        </div>
+        <span class="text-amber-400 font-mono font-bold text-lg mt-4">$17</span>
+      </div>
+
+      <!-- Special 2 -->
+      <div class="bg-rockerCard border border-rockerBorder rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition">
+        <div>
+          <span class="text-[10px] bg-amber-500/20 text-amber-300 font-black px-2 py-0.5 rounded uppercase tracking-wider">Fan Favorite Starter</span>
+          <h3 class="text-lg font-black text-white mt-2 mb-1">Mack Truck Eggrolls</h3>
+          <p class="text-xs text-stone-300">Hand-crafted crispy eggrolls packed with 100% black Angus beef, onions, and pickles. Served with house Burger Mac Sauce.</p>
+        </div>
+        <span class="text-amber-400 font-mono font-bold text-lg mt-4">$13</span>
+      </div>
+
+      <!-- Special 3 -->
+      <div class="bg-rockerCard border border-rockerBorder rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition">
+        <div>
+          <span class="text-[10px] bg-amber-500/20 text-amber-300 font-black px-2 py-0.5 rounded uppercase tracking-wider">German Classic</span>
+          <h3 class="text-lg font-black text-white mt-2 mb-1">Jägerschnitzel</h3>
+          <p class="text-xs text-stone-300">Pork tenderloin pounded thin and fried to crisp perfection. Smothered in traditional German mushroom and onion cream sauce.</p>
+        </div>
+        <span class="text-amber-400 font-mono font-bold text-lg mt-4">$18</span>
+      </div>
+
+      <!-- Special 4 -->
+      <div class="bg-rockerCard border border-rockerBorder rounded-2xl p-5 flex flex-col justify-between hover:border-amber-500/50 transition">
+        <div>
+          <span class="text-[10px] bg-amber-500/20 text-amber-300 font-black px-2 py-0.5 rounded uppercase tracking-wider">Beer-Simmered</span>
+          <h3 class="text-lg font-black text-white mt-2 mb-1">Kölsch Bratwurst</h3>
+          <p class="text-xs text-stone-300">Authentic smoked bratwurst topped with sauerkraut, slow-simmered in our house Kölsch beer to melt in your mouth. Served with chips & mustard.</p>
+        </div>
+        <span class="text-amber-400 font-mono font-bold text-lg mt-4">$14</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TAPROOM FOOD MENU (Exact from Physical Menu) -->
+  <section id="food" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-xs uppercase tracking-widest text-stone-400 font-extrabold">Made In-House</span>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">The Taproom Menu</h2>
+      
+      <!-- Food Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 mt-6">
+        <button onclick="setFoodTab('mains')" id="btn-food-mains" class="food-btn px-4 py-2 rounded-lg text-xs font-bold bg-amber-500 text-stone-950 transition">Mains & Baskets</button>
+        <button onclick="setFoodTab('handhelds')" id="btn-food-handhelds" class="food-btn px-4 py-2 rounded-lg text-xs font-bold bg-stone-800 text-stone-300 hover:bg-stone-700 transition">Handhelds & Sandwiches</button>
+        <button onclick="setFoodTab('sharables')" id="btn-food-sharables" class="food-btn px-4 py-2 rounded-lg text-xs font-bold bg-stone-800 text-stone-300 hover:bg-stone-700 transition">Sharables & Starters</button>
+        <button onclick="setFoodTab('flatbreads')" id="btn-food-flatbreads" class="food-btn px-4 py-2 rounded-lg text-xs font-bold bg-stone-800 text-stone-300 hover:bg-stone-700 transition">Flatbreads & Salads</button>
+      </div>
+    </div>
+
+    <!-- TAB 1: MAINS -->
+    <div id="food-mains" class="tab-content active grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Fish & Chips</h4>
+          <span class="text-amber-400 font-mono font-bold">$16.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Atlantic cod battered in our signature Son of a Peach beer batter, served with house fries, house-made tartar sauce or malt vinegar.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Chicken Tender Basket</h4>
+          <span class="text-amber-400 font-mono font-bold">$14.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Crispy tenders served with house dipping sauce and your choice of fries or pub chips.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Taproom Wings</h4>
+          <span class="text-amber-400 font-mono font-bold">6 for $13.99 | 12 for $18.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Asian, Dry Rub, Buffalo, BBQ, or Extra Hot (not for faint of heart). Served with ranch or bleu cheese.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl sm:col-span-2 lg:col-span-3">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Skillet Mac & Cheese</h4>
+          <span class="text-amber-400 font-mono font-bold">$14.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Rich, creamy house cheese sauce topped with house-made breadcrumbs. Add Smoked Pork (+$4), Grilled Chicken (+$4), or Bacon (+$3).</p>
+      </div>
+    </div>
+
+    <!-- TAB 2: HANDHELDS -->
+    <div id="food-handhelds" class="tab-content grid sm:grid-cols-2 gap-6">
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">The Smashburger</h4>
+          <span class="text-amber-400 font-mono font-bold">$16.50</span>
+        </div>
+        <p class="text-xs text-stone-300 mb-2">Two smashed patties, white American cheese, pickles, side house sauce. Served with chips or fries and pickled veg.</p>
+        <span class="text-[11px] text-amber-400">Upgrade: Oklahoma Style (+$1) • Bacon (+$2) • Veggie Patty Substitute Available</span>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Smoked Pork Sandwich</h4>
+          <span class="text-amber-400 font-mono font-bold">$15.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Slow-smoked pork tossed in house barbecue sauce, served on a toasted bun with pickled veg and choice of side.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Crispy Chicken Sandwich</h4>
+          <span class="text-amber-400 font-mono font-bold">$15.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Golden fried chicken breast topped with house chipotle aioli, shredded lettuce, and pickles on a brioche bun.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Classic Italian Sandwich</h4>
+          <span class="text-amber-400 font-mono font-bold">$15.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Hot or Cold: Mortadella, soppressata, ham, salami, pepperoni, fresh provolone, lettuce, tomato, onion, oregano oil & vinegar.</p>
+      </div>
+    </div>
+
+    <!-- TAB 3: SHARABLES -->
+    <div id="food-sharables" class="tab-content grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Rocking Nachos</h4>
+          <span class="text-amber-400 font-mono font-bold">$14.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Queso, sour cream, avocado crema, pico, lettuce, cilantro, onions, jalapeños, salsa. Add Chicken, Pork, or Chorizo (+$4) or Steak (+$6.99).</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Giant Soft Pretzel</h4>
+          <span class="text-amber-400 font-mono font-bold">$12.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Jumbo oven-baked Bavarian style pretzel served hot with warm beer queso and coarse brown pub mustard.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Fried Mozzarella Log</h4>
+          <span class="text-amber-400 font-mono font-bold">$10.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Golden-fried whole mozzarella log, served hot with zesty house marinara.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Charcuterie Board</h4>
+          <span class="text-amber-400 font-mono font-bold">$16.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Chef’s hand-selected cured meats, artisan cheeses, seasonal accompaniments, and toasted crackers.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl sm:col-span-2">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Basket of Fries or Pub Chips</h4>
+          <span class="text-amber-400 font-mono font-bold">$4.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Make 'em Loaded (+$5): Warm queso, crispy bacon, crema, fresh jalapeños, and green onions. Add pork or chicken (+$4).</p>
+      </div>
+    </div>
+
+    <!-- TAB 4: FLATBREADS & SALADS -->
+    <div id="food-flatbreads" class="tab-content grid sm:grid-cols-2 gap-6">
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Classic Taproom Flatbread</h4>
+          <span class="text-amber-400 font-mono font-bold">$13.99</span>
+        </div>
+        <p class="text-xs text-stone-300 mb-2">Marinara sauce, shredded mozzarella. Add toppings: Pepperoni, Soppressata, Smoked Pork, Bacon (+$2 ea), Jalapeños, Onions, Tomatoes (+$1.50 ea).</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Cheesy Garlic Bread</h4>
+          <span class="text-amber-400 font-mono font-bold">$10.50</span>
+        </div>
+        <p class="text-xs text-stone-300">Garlic buttered flatbread crust smothered in melted mozzarella, served with house marinara dip.</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Taproom Cobb Salad</h4>
+          <span class="text-amber-400 font-mono font-bold">$16.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Chicken (grilled or fried), bacon, hard-boiled egg, bleu cheese, tomato, cucumber, avocado. Upgrade protein: Steak (+$5.99) or Shrimp (+$4.99).</p>
+      </div>
+
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-xl">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="font-bold text-white">Crisp Caesar Salad</h4>
+          <span class="text-amber-400 font-mono font-bold">$13.99</span>
+        </div>
+        <p class="text-xs text-stone-300">Crisp romaine, shredded parmesan, house Caesar dressing, croutons. Add Chicken (+$4), Steak (+$6.99), Shrimp (+$6.99), or Salmon (+$7.99).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEER BOARD & FLAGSHIPS -->
+  <section id="taps" class="py-16 px-4 bg-stone-950 border-t border-rockerBorder">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest text-amber-500 font-extrabold">Brewed On-Site in Spartanburg</span>
+        <h2 class="text-3xl font-black text-white mt-1">What's Flowing from the Tanks</h2>
+        <p class="text-stone-400 text-sm mt-1">Flights, 16oz pints, and 32oz/64oz growlers poured daily.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-2xl relative">
+          <span class="bg-amber-500/20 text-amber-300 font-mono text-xs px-2 py-0.5 rounded font-bold">5.0% ABV • 16 IBU</span>
+          <h3 class="text-xl font-black text-amber-400 mt-2">Son of a Peach</h3>
+          <p class="text-xs text-stone-400 uppercase tracking-wider font-semibold mb-2">Unfiltered Wheat Ale</p>
+          <p class="text-xs text-stone-300">The legendary South Carolina brew crafted with real local sweet peaches. Unfiltered, refreshing, and world-famous.</p>
+        </div>
+
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-2xl relative">
+          <span class="bg-amber-500/20 text-amber-300 font-mono text-xs px-2 py-0.5 rounded font-bold">8.5% ABV • 50 IBU</span>
+          <h3 class="text-xl font-black text-amber-400 mt-2">Bell Ringer</h3>
+          <p class="text-xs text-stone-400 uppercase tracking-wider font-semibold mb-2">Imperial Strong Ale</p>
+          <p class="text-xs text-stone-300">Enters the first round swinging. Robust caramel malt balance backing an assertive, resinous hop character.</p>
+        </div>
+
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-2xl relative">
+          <span class="bg-amber-500/20 text-amber-300 font-mono text-xs px-2 py-0.5 rounded font-bold">5.2% ABV</span>
+          <h3 class="text-xl font-black text-amber-400 mt-2">Palmetto Trail Ale</h3>
+          <p class="text-xs text-stone-400 uppercase tracking-wider font-semibold mb-2">American Pale Ale</p>
+          <p class="text-xs text-stone-300">Dry-hopped with Citra and Amarillo hops. Proceeds directly benefit the Palmetto Conservation Foundation trail system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY COMMUNITY EVENTS (Featuring MTG Wednesday) -->
+  <section id="events" class="py-16 px-4 max-w-5xl mx-auto border-t border-rockerBorder">
+    <div class="text-center mb-10">
+      <span class="text-xs uppercase tracking-widest text-amber-500 font-extrabold">Taproom Happenings</span>
+      <h2 class="text-3xl font-black text-white mt-1">Weekly Lineup & Live Music</h2>
+      <p class="text-stone-400 text-sm mt-1">Never a cover charge. Always great company.</p>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Wednesday Magic Event -->
+      <div class="bg-stone-900 border border-purple-500/40 p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg">
+        <div class="flex items-center gap-4">
+          <div class="bg-purple-950/80 border border-purple-500/40 text-purple-300 rounded-xl p-3 text-center min-w-[75px]">
+            <span class="block text-xs uppercase font-bold">Wed</span>
+            <span class="text-xl font-black">6 PM</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-white">Commander & Casual Draft: Magic the Gathering</h4>
+            <p class="text-xs text-stone-400">Casual Commander pods, booster packs, trade binders, and cold pints. Kitchen open late.</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold text-purple-300 bg-purple-950 border border-purple-800 px-3.5 py-1 rounded-full w-fit">Community Gathering</span>
+      </div>
+
+      <!-- Thursday Trivia -->
+      <div class="bg-stone-900 border border-stone-800 p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="bg-stone-800 border border-stone-700 text-amber-400 rounded-xl p-3 text-center min-w-[75px]">
+            <span class="block text-xs uppercase font-bold">Thu</span>
+            <span class="text-xl font-black">7 PM</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-white">Weekly Pub Trivia</h4>
+            <p class="text-xs text-stone-400">Bring your smartest friends. Free to play, brewery prizes for 1st, 2nd, and 3rd place.</p>
+          </div>
+        </div>
+        <span class="text-xs font-semibold text-stone-300 bg-stone-800 px-3.5 py-1 rounded-full w-fit">Taproom Stage</span>
+      </div>
+
+      <!-- Hoppy Hour Promo -->
+      <div class="bg-stone-900 border border-amber-500/40 p-5 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="bg-amber-500/20 text-amber-400 border border-amber-500/40 rounded-xl p-3 text-center min-w-[75px]">
+            <span class="block text-xs uppercase font-bold">Mon–Thu</span>
+            <span class="text-base font-black">4–6 PM</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-white">Hoppy Hour & 50% Off Simulator Bays</h4>
+            <p class="text-xs text-stone-400">Drink & wine specials plus half-price golf bays next door at Streaking Birdies.</p>
+          </div>
+        </div>
+        <span class="text-xs font-bold text-amber-400 bg-amber-950/60 border border-amber-700 px-3.5 py-1 rounded-full w-fit">Birdies Crossover</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEG & CASE TO-GO SALES -->
+  <section id="retail" class="py-14 bg-stone-950 border-t border-rockerBorder px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="text-xs font-black text-amber-500 uppercase tracking-widest">Straight from the Brewery Cooler</span>
+        <h3 class="text-3xl font-black text-white mt-1">Kegs & Cases To-Go</h3>
+        <p class="text-stone-300 text-sm mt-3 leading-relaxed">
+          Stocking up for a lake day, backyard tailgate, or wedding? Pick up fresh cases, 1/6 bbl sixtels, or full 1/2 bbl kegs directly from our taproom staff. Tap & tub rentals available upon request.
+        </p>
+      </div>
+      <div class="bg-stone-900 border border-stone-800 p-6 rounded-2xl text-center space-y-3">
+        <h4 class="text-lg font-bold text-amber-400">Need a Keg for This Weekend?</h4>
+        <p class="text-xs text-stone-400">Flagships typically ready for pickup today. Call ahead for seasonal batches.</p>
+        <a href="tel:8645852337" class="block w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-2.5 rounded-lg text-sm transition">
+          Call Taproom (864) 585-2337
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 text-center text-xs text-stone-500 border-t border-rockerBorder">
+    <p>© RJ Rockers Brewing Co. • 226 W Main St, Spartanburg, SC 29306</p>
+    <p class="mt-1">Sharing great eats & swings with our neighbors at TakoSushi and Streaking Birdies.</p>
+  </footer>
+
+  <!-- Food Tab Switcher Script -->
+  <script>
+    function setFoodTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.food-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-500', 'text-stone-950');
+        btn.classList.add('bg-stone-800', 'text-stone-300');
+      });
+
+      const activePanel = document.getElementById('food-' + tabName);
+      if (activePanel) activePanel.classList.add('active');
+
+      const activeBtn = document.getElementById('btn-food-' + tabName);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-stone-800', 'text-stone-300');
+        activeBtn.classList.add('bg-amber-500', 'text-stone-950');
+      }
+    }
+  </script>
+</body>
+</html>

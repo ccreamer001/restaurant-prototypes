@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Streaking Birdies | Indoor Golf & Lounge</title>
+  <!-- Tailwind CSS via CDN for rapid modern styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            birdieGreen: '#10b981',
+            birdieDark: '#0f172a',
+            birdieAccent: '#38bdf8'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- Sticky Navigation -->
+  <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-black tracking-tight text-emerald-400">STREAKING BIRDIES</span>
+        <span class="text-xs uppercase tracking-widest text-slate-400 border-l border-slate-700 pl-2">Spartanburg</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#simulator" class="hover:text-emerald-400 transition">The Bays</a>
+        <a href="#drinks" class="hover:text-emerald-400 transition">Bar & Drinks</a>
+        <a href="#pricing" class="hover:text-emerald-400 transition">Pricing</a>
+        <a href="#parties" class="hover:text-emerald-400 transition">Private Events</a>
+      </nav>
+      <a href="#simulator" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition">
+        Reserve a Bay
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 px-4 text-center overflow-hidden border-b border-slate-800">
+    <div class="max-w-3xl mx-auto space-y-6">
+      <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/20">
+        TrackMan Tech • Full Bar • Lounge Vibe
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+        Play Pebble Beach. Grab Craft Cocktails. <br class="hidden sm:inline"/>
+        <span class="text-emerald-400">Zero Intimidation.</span>
+      </h1>
+      <p class="text-slate-400 text-lg md:text-xl">
+        Whether you’re dialing in your swing on TrackMan or hanging out with friends playing casual party games, our climate-controlled bays and bar are built for a good time.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="#simulator" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg shadow-emerald-500/20 transition">
+          Book Tee Time
+        </a>
+        <a href="#drinks" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3 rounded-lg border border-slate-700 transition">
+          View Drink Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Bay Reservation Flow -->
+  <section id="simulator" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-3xl font-bold">Pick Your Bay & Mode</h2>
+      <p class="text-slate-400 mt-2 text-sm">TrackMan simulators aren't just for 18 holes of golf—they run multiplayer party games, closest-to-pin, and arcade challenges.</p>
+    </div>
+
+    <!-- Bay Selection Grid -->
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <!-- Card 1 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-slate-100">Simulator Bay 1</h3>
+            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono">TrackMan 4</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-4">Spacious setup ideal for groups up to 6. Ultra-fast high-speed cameras and real-time ball flight data.</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+            <li>✓ 200+ Virtual Tour Courses</li>
+            <li>✓ Party Arcade Games (Capture Flag, Bullseye)</li>
+            <li>✓ Direct Bar & Food Delivery to Bay</li>
+          </ul>
+        </div>
+        <button onclick="selectBay('Bay 1')" class="w-full bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 font-semibold py-2 rounded-lg text-sm transition">
+          Select Bay 1 ($45/hr)
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-slate-100">Simulator Bay 2</h3>
+            <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono">TrackMan 4</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-4">Center-lounge placement right near the bar. High-top seating for spectators and casual hangouts.</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+            <li>✓ Closest to the Tap & Cocktail Bar</li>
+            <li>✓ Left & Right Hand Compatible</li>
+            <li>✓ Practice Driving Range & Club Fitting Data</li>
+          </ul>
+        </div>
+        <button onclick="selectBay('Bay 2')" class="w-full bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 font-semibold py-2 rounded-lg text-sm transition">
+          Select Bay 2 ($45/hr)
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition">
+        <div>
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold text-slate-100">VIP / Party Bay 3</h3>
+            <span class="text-xs bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-mono">Large Group</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-4">Extended lounge seating for larger groups (up to 10). Dedicated TV screen for sports viewing while playing.</p>
+          <ul class="text-xs text-slate-300 space-y-1.5 mb-6">
+            <li>✓ Extra Couch & Lounge Space</li>
+            <li>✓ Multi-Game Arcade Modes</li>
+            <li>✓ Group Drink Pitchers & Cocktail Service</li>
+          </ul>
+        </div>
+        <button onclick="selectBay('Bay 3 (VIP)')" class="w-full bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-slate-200 font-semibold py-2 rounded-lg text-sm transition">
+          Select VIP Bay ($55/hr)
+        </button>
+      </div>
+    </div>
+
+    <!-- Booking Confirmation Drawer / Box -->
+    <div id="bookingBox" class="hidden bg-slate-900 border border-emerald-500/40 rounded-xl p-6 max-w-xl mx-auto">
+      <h3 class="text-lg font-bold text-emerald-400 mb-2">Book Your Session: <span id="selectedBayName" class="text-white"></span></h3>
+      <div class="grid grid-cols-2 gap-4 text-sm mb-4">
+        <div>
+          <label class="block text-slate-400 mb-1">Date</label>
+          <input type="date" class="w-full bg-slate-800 border border-slate-700 rounded p-2 text-white" />
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Time Slot</label>
+          <select class="w-full bg-slate-800 border border-slate-700 rounded p-2 text-white">
+            <option>4:00 PM - 5:00 PM</option>
+            <option>5:00 PM - 6:00 PM</option>
+            <option>6:00 PM - 7:00 PM</option>
+            <option>7:00 PM - 8:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <button class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 rounded-lg transition">
+        Continue to Booking Details
+      </button>
+    </div>
+  </section>
+
+  <!-- The Bar & Cocktail Lounge Showcase -->
+  <section id="drinks" class="py-16 bg-slate-900 border-y border-slate-800 px-4">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+        <div>
+          <span class="text-xs font-semibold text-emerald-400 uppercase tracking-widest">More Than Just Cans</span>
+          <h2 class="text-3xl font-bold mt-1">The Birdie Bar & Cocktails</h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md mt-2 md:mt-0">
+          Craft cocktails, fresh mixers, and local taps poured right at your bay or at the lounge bar.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-bold text-slate-100">Spicy Tequila Smash</h4>
+            <span class="text-emerald-400 font-mono text-sm">$11</span>
+          </div>
+          <p class="text-xs text-slate-400">House infused jalapeño tequila, fresh lime juice, agave, and a splash of soda with a tajín rim.</p>
+        </div>
+        <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-bold text-slate-100">Bramble Spritz</h4>
+            <span class="text-emerald-400 font-mono text-sm">$12</span>
+          </div>
+          <p class="text-xs text-slate-400">Gin or whiskey base, blackberry liqueur, fresh squeezed lemon, topped with crisp prosecco.</p>
+        </div>
+        <div class="bg-slate-950 p-5 rounded-lg border border-slate-800">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-bold text-slate-100">Transfusion on Draft</h4>
+            <span class="text-emerald-400 font-mono text-sm">$9</span>
+          </div>
+          <p class="text-xs text-slate-400">The golfer classic—premium vodka, ginger ale, and Concord grape juice over crushed ice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-4 text-center text-xs text-slate-500 border-t border-slate-900">
+    <p>© Streaking Birdies • 226 W Main St, Spartanburg, SC</p>
+    <p class="mt-1">Sharing great food & drinks with our neighbors at RJ Rockers & TakoSushi.</p>
+  </footer>
+
+  <script>
+    function selectBay(bayName) {
+      document.getElementById('bookingBox').classList.remove('hidden');
+      document.getElementById('selectedBayName').innerText = bayName;
+      document.getElementById('bookingBox').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
